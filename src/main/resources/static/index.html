@@ -10,24 +10,60 @@
 <h1>Bestilling av kinobiletter</h1>
 
 <table>
+
+    <label for="velgfilm">Velg Film</label>
+    <select name="Filmer" id="velgfilm" required>
+        <option value="">Velg film</option>
+        <option value="barbie">Barbie</option>
+        <option value="Black panther">Black panther</option>
+        <option value="Upgraded">Upgraded</option>
+    </select> <br><br>
+
+    <label for="Antall">Antall</label>
+    <input type="text" id="Antall" maxlength="2" size="1.5">
+    <span id = "feilantall" style="color:red" ></span> <br><br>
+
+</table>
+
+<table>
     <tr>
-        <td>Velg film</td>
-        <td> <input onclick="kjøpe()"  type="text" id="film"  value="" /></td>
+        <td> <label for="Fornavn">Fornavn</label> </td>
+        <td><input id="Fornavn" type="text" required> </td>
+        <td> <span id="feilfornavn" style="color: red"></span> </td>
     </tr>
 
 
-    <td>Antall</td>
-    <td> <input type="text" id="adresse"/></td>
-    </tr>
     <tr>
-        <td>Fornavn</td>
-        <td> <input type="text" id="telefonnr"/></td>
+        <td> <label for="Etternavn">Etternavn</label> </td>
+        <td><input id="Etternavn" type="text" required> </td>
+        <td> <span id="feiletternavn" style="color: red"></span> </td>
+    </tr>
+
+
+    <tr>
+        <td> <label for="Telefonnr">Telefonnr</label> </td>
+        <td><input id="Telefonnr" type="text" required> </td>
+        <td> <span id="feiltlf" style="color: red"></span> </td>
     </tr>
 
     <tr>
-        <td> <button onclick="registrer()">Registrer</button></td>
+        <td> <label for="Epost">Epost</label> </td>
+        <td><input id="Epost" type="text" required> </td>
+        <td> <span id="feilepost" style="color: red"></span> </td>
     </tr>
 </table>
+<div id="svar"> <button onclick="kjop()">Kjøp biletter</button>
+</div>
+
+    <div>
+        <h2> Alle biletter </h2>
+        <div id="register"></div>
+
+    </div>
+
+    <div class="slett">
+        <button onclick="slett()">Slett alle Registeringer</button>
+    </div>
 
 </body>
 </html>
